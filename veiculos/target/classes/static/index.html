@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Veículos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestão de Veículos</h1>
+        
+        <div>
+            <h2>Cadastrar Novo Veículo</h2>
+            <form id="form-insert">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" required>
+                <label for="combustivel">Combustível:</label>
+                <input type="text" id="combustivel" required>
+                <label for="capacidade">Capacidade:</label>
+                <input type="number" id="capacidade" required>
+                <label for="velocidadeMax">Velocidade Máxima:</label>
+                <input type="number" id="velocidadeMax" required>
+                <button type="submit">Cadastrar Veículo</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Atualizar Veículo</h2>
+            <form id="form-update">
+                <label for="tipo-update">Tipo:</label>
+                <input type="text" id="tipo-update" required>
+                <button type="submit">Buscar Veículo</button>
+            </form>
+            <div id="update-veiculo" style="display: none;">
+                <h3>Alterar Dados</h3>
+                <label for="combustivel-update">Combustível:</label>
+                <input type="text" id="combustivel-update" required>
+                <label for="capacidade-update">Capacidade:</label>
+                <input type="number" id="capacidade-update" required>
+                <label for="velocidadeMax-update">Velocidade Máxima:</label>
+                <input type="number" id="velocidadeMax-update" required>
+                <button id="btn-update">Atualizar</button>
+            </div>
+        </div>
+        
+        <div>
+            <h2>Veículos Cadastrados</h2>
+            <table id="veiculos-list">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Combustível</th>
+                        <th>Capacidade</th>
+                        <th>Velocidade Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+           
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>Excluir Veículo</h2>
+            <label for="tipo-delete">Tipo do Veículo:</label>
+            <input type="text" id="tipo-delete" required>
+            <button id="btn-delete">Excluir Veículo</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
